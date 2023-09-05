@@ -1,5 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+// importo componenti
+
+import HomePage from './pages/HomePage.vue';
+import AboutUs from './pages/AboutUs.vue';
+import Contacts from './pages/Contacts.vue';
+
+
 const router= createRouter({
     history: createWebHistory(),
 
