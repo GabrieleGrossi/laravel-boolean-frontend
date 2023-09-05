@@ -2,42 +2,18 @@
 
     <section class="my_container">
 
-            <div class="cocktail-card">
-
-            <div class="cocktail-header">
-
-                <h2>
-                    Nome cocktail
-                </h2>
-
-                <h4>alcoholic</h4>
-
-            </div>
-
-            <div class="cocktail-body">
-
-                <div class="image-container">
-                    <img src="/bar.jpg" alt="">
-                    
-
-                </div>
+            <div class="cocktail-card " v-for="cocktail in cocktails">
                 
-                    <h2>Instruction</h2>
-
-                    <h3>Ingredients</h3>
-            </div>
-
-            </div>
-
-            <div class="cocktail-card">
-
             <div class="cocktail-header">
 
                 <h2>
-                     Nome cocktail
+                    Cocktail name:
+                    {{ cocktail.name }}
+                    
                 </h2>
 
-                <h4>alcoholic
+                <h4>alcoholic:
+                    {{ cocktail.alcoholic }}
 
                 </h4>
 
@@ -46,49 +22,23 @@
             <div class="cocktail-body">
 
                 <div class="image-container">
-
-                    <img src="/bar.jpg" alt="">
-        
+                    <img :src="cocktail.image" alt="">
+                    
 
                 </div>
-    
-                <h2>Instruction</h2>
-
-                <h3>Ingredients</h3>
-            </div>
-
-            </div>
-
-            <div class="cocktail-card">
-
-                <div class="cocktail-header">
-
+                
                     <h2>
-                         Daniel's Spritz
+                        Instruction:
+                        {{ cocktail.instructions}}
                     </h2>
 
-                    <h4>alcoholic
-
-                    </h4>
-
-                </div>
-
-                <div class="cocktail-body">
-
-                    <div class="image-container">
-
-                        <img src="/bar.jpg" alt="">
-
-
-                    </div>
-
-                    <h2>Instruction</h2>
-
-                    <h3>Ingredients</h3>
-                </div>
-
+                    <h3>
+                        Ingredients:
+                        {{ cocktail.ingredients }}
+                    </h3>
             </div>
 
+            </div>
     </section>
 
     
@@ -96,9 +46,39 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-    name: 'HomePage'
+    name: 'HomePage',
+
+
+
+        data() {
+        return {
+            cocktails:[],
+            apiUrl:'http://127.0.0.1:8000/api/cocktail',
+        }
+    },
+
+    methods: {
+        getCocktails(){
+            axios.get(this.apiUrl, {
+                params: {}
+            })
+            .then((response)=>{
+                console.log(response.data.results.data);
+                this.cocktails= response.data.results.data
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        },
+    },
+
+    created() {
+        this.getCocktails();
+    },
 }
+
 </script>
 <style lang="scss" scoped>
 
