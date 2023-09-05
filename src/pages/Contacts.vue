@@ -4,7 +4,7 @@
             Contact us
         </h1>
     </div>
-    <div>
+    <div class="flex">
         <ul>
             <li>
                 <h1 class="text-hover">
@@ -16,8 +16,10 @@
                         Piazza la bomba n. 33
                     </a>
                 </h3>
-                <img src="https://www.oneindia.com/img/2015/02/04-1423022852-paris-map.jpg">
             </li>
+            <img src="https://www.oneindia.com/img/2015/02/04-1423022852-paris-map.jpg">
+        </ul>
+        <ul>
             <li>
                 <div>
                     <h1 class="text-hover">
@@ -48,6 +50,8 @@
                     </ul>
                 </div>
             </li>
+        </ul>
+        <ul>
             <li>
                 <h1 class="text-hover">
                     Contatti
@@ -88,6 +92,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+ul {
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+}
+li{
+    list-style-type: none;
+}
 .head{
     margin-bottom: 5rem;
     padding: 0;
@@ -95,6 +106,10 @@ export default {
 }
 h1:hover{
     color: red;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
 }
 img{
     width: 350px;
@@ -133,11 +148,11 @@ h3{
 	&:hover,
 	&:focus,
 	&:active {
-		transform: translateY(-5px); /* move the element up by 5px */
+		transform: translateY(-5px);
 
 		&:before {
 			opacity: 1;
-			transform: translateY(5px); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+			transform: translateY(5px);
 		}
 	}
 }
