@@ -1,145 +1,150 @@
 <template>
-    <div class="contact-us">
-        <div class="container">
-            <div class="left-column">
-                <div>
-                    <h1>
-                        Contact Us
+    <div class="contacts">
+            <h1  class="head">
+                About Us
+            </h1>
+        <div class="flex">
+            <ul>
+                <li>
+                    <h1 class="text-hover">
+                        Dove siamo
                     </h1>
-                    <p>
-                        We mix it for you.
-                    </p>
-                </div>
-                <img src="https://www.degustibuss.it/wp-content/uploads/2023/01/barlady-professionista.jpg" alt="Barman">
-                <h3>
-                    For your perfect event our services.
-                </h3>
-            </div>
-            <div class="right-column">
-                <form action="">
-                    <label for="Name" class="block">Insert your name</label>
-                    <input type="text" id="Name">
-
-                    <label for="email" class="block">Insert your email</label>
-                    <input type="email" name="email" id="email">
-                    
-                    <label for="city" class="block">Find your city</label>
-                    <select name="city" id="city">
-                        <option value="" v-for="city in cities">
-                            {{ city }}
-                        </option>
-                    </select>
-
-                    <label for="service" class="block">Select the catering type</label>
-                    <select name="service" id="service">
-                        <option value="" v-for="service in services">
-                            {{ service }}
-                        </option>
-                    </select>
-
-                    <label for="request" class="block">Give us your personal request</label>
-                    <textarea name="request" id="request"  rows="10"></textarea>
-                
-                    <button type="submit" class="btn">Submit</button>
-                </form>
-            </div>
+                    <h3>
+                        Puoi trovarci in: <br>
+                        <a>
+                            Piazza la bomba n. 33
+                        </a>
+                    </h3>
+                </li>
+                <img src="https://www.oneindia.com/img/2015/02/04-1423022852-paris-map.jpg">
+            </ul>
+            <ul>
+                <li>
+                    <div>
+                        <h1 class="text-hover">
+                            I nostri orai
+                        </h1>
+                        <ul class="column">
+                            <li>
+                                Lunedì 7:30/23:00
+                            </li>
+                            <li>
+                                Martedì 7:30/23:00
+                            </li>
+                            <li>
+                                Mercoledì 7:30/23:00
+                            </li>
+                            <li>
+                                Giovedì 7:30/23:00
+                            </li>
+                            <li>
+                                Venerdì 7:30/01:00
+                            </li>
+                            <li>
+                                Sabato 7:30/01:00
+                            </li>
+                            <li>
+                                Domenica 7:30/23:00
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h1 class="text-hover">
+                        Contatti
+                    </h1>
+                    <ul class="column">
+                        <li>
+                            <h3>
+                                Email:
+                            </h3>
+                            <h5 class="text-hover">
+                                cocktails.bar@gmail.com 
+                            </h5>
+                        </li>
+                        <li>
+                            <h3>
+                                Tel:
+                            </h3>
+                            <h5 class="text-hover">
+                                065 8895365
+                            </h5>
+                        </li>
+                        <li>
+                            <h3>
+                                Cel:
+                            </h3>
+                            <h5 class="text-hover">
+                                333 6548752
+                            </h5>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 <script>
 export default {
-  name: 'Contacts',
-  data() {
-    return {
-      cities: [
-        'Minervino Murge', 'Modugno', 'Mola di Bari', 'Molfetta', 'Monopoli', 'Monte Sant Angelo', 'Monteiasi', 'Monteleone di Puglia', 'Montemesola', 'Monteparano', 'Monteroni di Lecce', 'Montesano Salentino', 'Morciano di Leuca', 'Motta Montecorvino', 'Mottola'
-      ],
-
-      services:['All-Inclusive', 'Bring Your Own Booze', 'Cash Bar', 'Consumption', 'Open Bar'],
-    }
-  }
+    name: 'Contacts'
 }
 </script>
-
 <style lang="scss" scoped>
-    div.contact-us{
-    width: 100vw;
-    height: 100vh;
+div.contacts{
     background-image: url('https://images.pexels.com/photos/4667030/pexels-photo-4667030.jpeg?cs=srgb&dl=pexels-cottonbro-studio-4667030.jpg&fm=jpg');
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    opacity: 0.7;
+    padding-top: 4.5rem;
+}
+ul{
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+li{
+    list-style-type: none;
+}
+.head{
+    margin-bottom: 5rem;
+    padding: 0;
+    text-align: center;
+}
+h1:hover{
+    color: red;
+}
+.flex{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+}
+img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+h1{
+    margin-bottom: 1.5rem;
+    a{
+        margin-top: 1rem;
     }
-    div.container{
+}
+h3{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.text-hover{
+	text-align: center;
+}
+    
+.column{
         display: flex;
-        width: 80%;
-        background-color:  rgba(0,0,0,.7);
-        border-radius: 1rem;
-            div.left-column{
-            width: 50%;
-            padding: 2rem;
-                h1{
-                    font-size: 3.5rem;
-                    color: white;
-                }
-                p{
-                    color: white;
-                }
-                img{
-                    width: 100%;
-                    object-fit: cover;
-                    margin-top: 1rem;
-                    border-radius: 10%;
-                }
-                h3{
-                    margin-top: .5rem;
-                    color: white;
-                }
-            }
-
-            div.right-column{
-                width: 50%;
-                padding: 2rem;
-
-                form{
-
-                    label{
-                        margin-top: .5rem;
-                        font-size: 1.3rem;
-                        color: white;
-                        font-weight: bold;
-                    }
-                    input,
-                    select,
-                    textarea
-                    {
-                        margin-top: .5rem;
-                        padding: .5rem;
-                        width: 100%;
-                        border:1px solid grey;
-                        box-sizing: border-box;
-                        border: 4px solid white;
-                        border-radius: 5px;
-                        -webkit-transition: 0.5s;
-                        transition: 0.5s;
-                        outline: none;
-                    }
-                }
-                .block{
-                    display: block;
-                }
-
-                .btn{
-                    padding: .7rem;
-                    font-size: 1rem;
-                    font-weight: bolder;
-                    background-color: white;
-                    border-radius: 10px;
-                    margin-top: .5rem;
-                    color:#e1655b;
-                    border: 0;
-                }
-            }
+        flex-direction: column;
+        li{
+            margin: 0.5rem;
+        }
     }
 </style>
