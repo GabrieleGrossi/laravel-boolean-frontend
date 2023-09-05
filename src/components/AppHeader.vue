@@ -1,5 +1,10 @@
 <template>
     <nav>
+        <ul class="logo">
+            <li>
+                <a href="http://localhost:5174/"><img src="https://www.thecocktaildb.com/images/logo.png" alt="Nav bar logo"></a>
+            </li>
+        </ul>
         <ul>
             <li v-for="link in links">
                 <router-link :to="link.route">
@@ -37,17 +42,38 @@ export default {
 }
 </script>
 <style lang="scss">
-        
+
+nav{
+    background-color: #4f4f4f;
+    padding: 2rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .logo{
+        margin: 0 2rem;
+        font-size: 1.5rem;
+    }
+
     ul{
         list-style-type: none;
         display: flex;
-        justify-content: space-around;
-        margin-bottom: 100px;
+        justify-content: space-between;
+        align-items: center;
         
         a{
-
-            font-size: 2rem;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 2rem;
+            text-transform: uppercase;
         }
-    }
 
+        a:hover{
+            color: orange;
+        }
+
+      
+    }
+}
 </style>
