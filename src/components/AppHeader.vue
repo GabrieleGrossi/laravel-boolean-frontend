@@ -49,6 +49,7 @@ nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .logo{
         margin: 0 2rem;

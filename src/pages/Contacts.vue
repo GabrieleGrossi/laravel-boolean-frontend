@@ -46,15 +46,12 @@
             </div>
         </div>
     </div>
-    <AppFooter />
 </template>
 <script>
 import AppFooter from '../components/AppFooter.vue';
 export default {
   name: 'Contacts',
-    components:{
-        AppFooter,
-    },
+    
   data() {
     return {
       cities: [
