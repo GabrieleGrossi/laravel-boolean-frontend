@@ -1,5 +1,6 @@
 <template>
 
+
     <div>
         <input type="text" name="text" id="searchText" v-model="searchText">
         <button @click="newSearch(searchText)">search</button>
@@ -22,30 +23,29 @@
 
                 </h4>
 
+    
+    <div class="container">
+
+
+        <div class="card" v-for="cocktail in cocktails">
+            <div class="card-image">
+                <img :src="cocktail.image" alt="">
             </div>
 
-            <div class="cocktail-body">
+            <div class="card-text">
 
-                <div class="image-container">
-                    <img :src="cocktail.image" alt="">
-                    
+                <p class="card-meal-type">{{ cocktail.ingredients }}</p>
 
-                </div>
-                
-                    <h2>
-                        Instruction:
-                        {{ cocktail.instructions}}
-                    </h2>
+                <h2 class="card-title">{{ cocktail.name }}</h2>
 
-                    <h3>
-                        Ingredients:
-                        {{ cocktail.ingredients }}
-                    </h3>
-            </div>
+                <p class="card-body"> {{ cocktail.instructions}}</p>
 
             </div>
-    </section>
 
+            <div class="card-alcoholic">{{ cocktail.alcoholic }}</div>
+        </div>
+
+    </div>
     
   
 </template>
@@ -98,54 +98,80 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-
-    .my_container{
-        width: 1200px;
-        margin: 0 auto;
-        display: flex;
-
-    }
-    .cocktail-card{
-        width: calc((100% / 3) - 1rem);
-        border-radius: 1rem;
-        padding: 1rem;
-        margin-right: 1rem;
-        border-radius: 20px;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-
-    }
-    .cocktail-card:hover{
-        background-color: gray;
-        cursor: pointer;
-    }
-
-    .cocktail-header{
-        width: 100%;
-        height: 60px;
-        padding: 0.7rem;
-        text-align: center;
-    }
-
-    .cocktail-body{
-        width: 100%;
-        padding: 0.5rem;
-        height: 100%;
-        text-align: center;
-           .image-container{
-            width: 100%;
-
-
-            img{
-                width: 100%;
-                border-radius: 20px;
-                display: block;
-                margin-bottom: 1rem;
-            }
-         }
-         
-        
-    }
    
-    
+#header{
+  margin:20px;
+}
+#header>h1{
+  text-align:center;
+  font-size:3rem;
+}
+#header>p{
+  text-align:center;
+  font-size:1.5rem;
+  font-style:italic;
+}
+.container{
+  width:100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  padding:40px 20px;
+  background-image: url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1776&q=80);
+  background-size:cover;
+}
+.card{
+  display:flex;
+  flex-direction:column;
+  width:400px;
+  margin-bottom:60px;
+}
+.card>div{
+  box-shadow:0 15px 20px 0 rgba(0,0,0,0.5);
+}
+.card-image{
+  width:400px;
+  height:250px;
+}
+.card-image>img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.card-text{
+  margin:-30px auto;
+  margin-bottom:-50px;
+  height:300px;
+  width:300px;
+  background-color:#1D1C20;
+  color:#fff;
+  padding:20px;
+}
+.card-meal-type{
+  font-style:italic;
+}
+.card-title{
+  font-size:2.2rem;
+  margin-bottom:20px;
+  margin-top:5px;
+}
+.card-body{
+  font-size:1.25rem;
+}
+.card-alcoholic{
+  width:100px;
+  height:100px;
+  background-color:salmon;
+  color:#fff;
+  margin-left:auto;
+  font-size:1rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 </style>
 
