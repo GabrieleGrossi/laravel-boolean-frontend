@@ -6,7 +6,7 @@ export default{
     name: 'App',
     components:{
     // AppMain,
-    AppHeader
+    AppHeader,
 }
   }
 </script>
@@ -16,7 +16,6 @@ export default{
     <AppHeader />
   </header>
   <!-- <AppMain /> -->
-
 <main>
 
   <router-view>

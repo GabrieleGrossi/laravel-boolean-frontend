@@ -46,10 +46,15 @@
             </div>
         </div>
     </div>
+    <AppFooter />
 </template>
 <script>
+import AppFooter from '../components/AppFooter.vue';
 export default {
   name: 'Contacts',
+    components:{
+        AppFooter,
+    },
   data() {
     return {
       cities: [
@@ -64,7 +69,6 @@ export default {
 
 <style lang="scss" scoped>
     div.contact-us{
-    width: 100vw;
     height: 100vh;
     background-image: url('https://images.pexels.com/photos/4667030/pexels-photo-4667030.jpeg?cs=srgb&dl=pexels-cottonbro-studio-4667030.jpg&fm=jpg');
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
