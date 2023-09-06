@@ -2,7 +2,7 @@
     <nav>
         <ul class="logo">
             <li>
-                <a href="http://localhost:5174/"><img src="https://www.thecocktaildb.com/images/logo.png" alt="Nav bar logo"></a>
+                <img src="https://www.thecocktaildb.com/images/logo.png" alt="Nav bar logo">
             </li>
         </ul>
         <ul>
