@@ -27,7 +27,7 @@ export default {
                 },
                 {
                     route: './chi-siamo',
-                    name: 'AboutUs'
+                    name: 'About Us'
                 },
                 {
                     route: './contatti',

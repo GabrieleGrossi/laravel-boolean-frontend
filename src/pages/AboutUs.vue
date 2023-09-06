@@ -6,30 +6,30 @@
             <div class="container">
                 <div class="left-column">
                     <h2>
-                        Il TheCocktailDB è il luogo perfetto per i giovani alla ricerca di divertimento, buona musica e bevande deliziose. Situato nel cuore della città, il nostro bar è un'aggiunta fresca e vivace alla scena notturna locale. Siamo entusiasti di darvi il benvenuto in un'atmosfera amichevole e accogliente, dove potrete rilassarvi con gli amici o conoscere persone nuove.
+                        BAR DUE BICCHIERI is the perfect place for young people looking for fun, good music and delicious drinks. Located in the heart of the city, our bar is a fresh and lively addition to the local nightlife scene. We are excited to welcome you in a friendly and welcoming atmosphere where you can relax with friends or meet new people.
                     </h2>
                     <img src="https://us.123rf.com/450wm/dolgachov/dolgachov1608/dolgachov160804295/61235685-la-gente-svago-amicizia-e-concetto-di-comunicazione-gruppo-di-amici-sorridenti-felici-che-bevono.jpg?ver=6" alt="people at bar">
                 </div>
                 <div class="right-column">
                     <p>
                         <h2>
-                            Cosa ci rende unici:
+                            What makes us unique:
                         </h2>
                         <ul class="column">
                             <li>
-                                Cocktail Creativi: Il nostro team di barman esperti è pronto a deliziarvi con una vasta selezione di cocktail unici e deliziosi. Dai classici ai drink personalizzati, abbiamo qualcosa per tutti i gusti.
+                                Creative Cocktails: Our team of expert mixologists is ready to delight you with a wide selection of unique and delicious cocktails. From classics to custom drinks, we have something for everyone.
                             </li>
                             <li>
-                                Musica Live: Ogni fine settimana, ospitiamo band locali e DJ per farvi ballare tutta la notte. La nostra pista da ballo è il posto ideale per scatenarsi e divertirsi.
+                                Live Music: Every weekend, we host local bands and DJs to keep you dancing the night away. Our dance floor is the perfect place to let loose and have fun.
                             </li>
                             <li>
-                                Menù Gourmet: Non serviamo solo bevande eccezionali, ma anche deliziosi piatti per soddisfare la vostra fame. Dai finger food alle pietanze gourmet, la nostra cucina saprà conquistarvi.
+                                Gourmet Menu: We not only serve exceptional drinks, but also delicious dishes to satisfy your hunger. From finger food to gourmet dishes, our cuisine will win you over.
                             </li>
                             <li>
-                                Eventi Speciali: Organizziamo regolarmente eventi speciali, come serate a tema, feste a sorpresa e competizioni divertenti. Restate sintonizzati sui nostri canali social per rimanere aggiornati.
+                                Special Events: We regularly organize special events, such as theme nights, surprise parties and fun competitions. Stay tuned to our social channels to stay updated.
                             </li>
                             <li>
-                                Ambiente Accogliente: Il nostro bar è stato progettato con cura per creare un'atmosfera accogliente e alla moda. Siamo sicuri che vi sentirete come a casa vostra.
+                                Welcoming Atmosphere: Our bar has been carefully designed to create a trendy and welcoming atmosphere. We are sure you will feel right at home.
                             </li>
                         </ul>
                     </p>
@@ -40,29 +40,29 @@
                     <li>
                         <div>
                             <h1 class="text-hover">
-                                I nostri orai
+                                Our hours
                             </h1>
                             <ul class="column">
                                 <li>
-                                    Lunedì 7:30/23:00
+                                    Monday 7:30/23:00
                                 </li>
                                 <li>
-                                    Martedì 7:30/23:00
+                                    Tuesday 7:30/23:00
                                 </li>
                                 <li>
-                                    Mercoledì 7:30/23:00
+                                    Wednesday 7:30/23:00
                                 </li>
                                 <li>
-                                    Giovedì 7:30/23:00
+                                    Thursday 7:30/23:00
                                 </li>
                                 <li>
-                                    Venerdì 7:30/01:00
+                                    Friday 7:30/01:00
                                 </li>
                                 <li>
-                                    Sabato 7:30/01:00
+                                    Saturday 7:30/01:00
                                 </li>
                                 <li>
-                                    Domenica 7:30/23:00
+                                    Sunday 7:30/23:00
                                 </li>
                             </ul>
                         </div>
@@ -71,10 +71,10 @@
                 <ul>
                     <li>
                         <h1 class="text-hover">
-                            Dove siamo
+                            Here we are
                         </h1>
                         <h3>
-                            Puoi trovarci in: <br>
+                            You can find here: <br>
                             <a>
                                 Piazza la bomba n. 33
                             </a>
@@ -85,7 +85,7 @@
                 <ul>
                     <li>
                         <h1 class="text-hover">
-                            Contatti
+                            Contacts
                         </h1>
                         <ul class="column">
                             <li>
@@ -98,7 +98,7 @@
                             </li>
                             <li>
                                 <h3>
-                                    Tel:
+                                    Phone:
                                 </h3>
                                 <h5 class="text-hover">
                                     065 8895365
@@ -130,7 +130,6 @@ div.contacts{
     width: 100%;
     height: 100%;
     color: white;
-    opacity: 0.7;
     padding-top: 4.5rem;
 }
 ul{
@@ -151,8 +150,12 @@ h1:hover{
 .flex{
     display: flex;
     justify-content: space-between;
-    color: magenta;
     text-transform: capitalize;
+    background-color:  rgba(0,0,0,.7);
+    border-radius: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 img{
     width: 350px;
@@ -192,8 +195,9 @@ div.container{
         width: 50%;
         padding: 2rem;
         img{
-            width: 380px;
-            height: 380px;;
+            width: 450px;
+            height: 400px;
+            margin: 3rem;
         }
         
     }
