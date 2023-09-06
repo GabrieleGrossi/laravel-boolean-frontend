@@ -1,5 +1,10 @@
 <template>
 
+    <div>
+        <input type="text" name="text" id="searchText" v-model="searchText">
+        <button @click="newSearch(searchText)">search</button>
+    </div>
+
     <section class="my_container">
 
             <div class="cocktail-card " v-for="cocktail in cocktails">
@@ -56,26 +61,38 @@ export default {
         return {
             cocktails:[],
             apiUrl:'http://127.0.0.1:8000/api/cocktail',
+            searchText : '',
         }
     },
 
     methods: {
-        getCocktails(){
-            axios.get(this.apiUrl, {
-                params: {}
-            })
+        getCocktails(apiUrl = this.apiUrl, nameQuery = false){
+            const params = { }
+            if(nameQuery){
+                params.search = nameQuery;
+            }
+            
+            
+            axios.get(apiUrl, {params})
             .then((response)=>{
-                console.log(response.data.results.data);
-                this.cocktails= response.data.results.data
+                // console.log(response.data.results.data);
+                this.cocktails= response.data.results.data;
             })
             .catch(function (error) {
                 console.log(error);
             })
         },
+
+        newSearch(nameToSearch){
+                this.getCocktails(this.apiUrl, nameToSearch);
+        }
+
+
     },
 
     created() {
-        this.getCocktails();
+        this.getCocktails(this.apiUrl);
+        
     },
 }
 
