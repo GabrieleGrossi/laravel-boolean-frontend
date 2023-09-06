@@ -78,7 +78,7 @@ export default {
 .container{
   width:100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
+  height: 100%;
   display:flex;
   justify-content:space-around;
   flex-wrap:wrap;
