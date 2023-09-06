@@ -28,7 +28,7 @@ export default {
         padding: .7rem;
         color: white;
         background-color: grey;
-        width: 100vw;
+        width: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
         div.left-footer{

@@ -14,7 +14,7 @@
 
                 <h2 class="card-title">{{ cocktail.name }}</h2>
 
-                <p class="card-body"> {{ cocktail.instructions}}.</p>
+                <p class="card-body"> {{ cocktail.instructions}}</p>
 
             </div>
 
@@ -76,7 +76,9 @@ export default {
   font-style:italic;
 }
 .container{
-  width:100vw;
+  width:100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
   display:flex;
   justify-content:space-around;
   flex-wrap:wrap;
