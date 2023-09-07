@@ -90,8 +90,10 @@ export default {
 }
 .search-bar{
   display: flex;
+  align-items: center;
   width: 100%;
   margin-bottom: 3rem;
+  margin-left: 3rem;
 }
 .custom-btn {
  width: 130px;
